@@ -1,5 +1,8 @@
 ## Lab Discussion
 ### Names
+# Edem Ahorlu
+# Joe Heflin
+# Alexander Jimenez
 
 
 ### Collections Discussion
