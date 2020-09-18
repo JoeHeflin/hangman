@@ -13,7 +13,6 @@ import util.HangmanDictionary;
  */
 public class HangmanGameAutoGuesser {
     private static final String ALPHABET = "abcdefghijklmnopqrstuvwxyz";
-    private static final String LETTERS_ORDERED_BY_FREQUENCY = "etaoinshrldcumfpgwybvkxjqz";
 
     // word that is being guessed
     private String mySecretWord;
@@ -23,9 +22,7 @@ public class HangmanGameAutoGuesser {
     private DisplayWord myDisplayWord;
     // tracks letters guessed
     private StringBuilder myLettersLeftToGuess;
-    // guesser state
-    private String myLetters;
-    private int myIndex;
+    private AutoGuesser myGuesser;
 
 
     /**
@@ -37,8 +34,7 @@ public class HangmanGameAutoGuesser {
         myNumGuessesLeft = numGuesses;
         myLettersLeftToGuess = new StringBuilder(ALPHABET);
         myDisplayWord = new DisplayWord(mySecretWord);
-        myLetters = LETTERS_ORDERED_BY_FREQUENCY;
-        myIndex = 0;
+        myGuesser = new AutoGuesser();
     }
 
     /**
@@ -49,8 +45,8 @@ public class HangmanGameAutoGuesser {
         while (!gameOver) {
             printStatus();
 
-            Character guess = myLetters.charAt(myIndex++);
-            makeGuess(guess);
+            String guess = myGuesser.getGuess();
+            makeGuess(guess.toLowerCase().charAt(0));
             if (isGameLost()) {
                 System.out.println("YOU ARE HUNG!!!");
                 gameOver = true;

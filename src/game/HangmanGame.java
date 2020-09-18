@@ -1,6 +1,5 @@
 package game;
 
-import util.ConsoleReader;
 import util.DisplayWord;
 import util.HangmanDictionary;
 
@@ -11,7 +10,7 @@ import util.HangmanDictionary;
  *
  * @author Robert C. Duvall
  */
-public class HangmanGameInteractiveGuesser {
+public class HangmanGame {
     private static final String ALPHABET = "abcdefghijklmnopqrstuvwxyz";
 
     // word that is being guessed
@@ -22,17 +21,19 @@ public class HangmanGameInteractiveGuesser {
     private DisplayWord myDisplayWord;
     // tracks letters guessed
     private StringBuilder myLettersLeftToGuess;
+    private Guesser myGuesser;
 
 
     /**
      * Create Hangman game with the given dictionary of words to play a game with words 
      * of the given length and giving the user the given number of chances.
      */
-    public HangmanGameInteractiveGuesser (HangmanDictionary dictionary, int wordLength, int numGuesses) {
+    public HangmanGame (Guesser guesser, HangmanDictionary dictionary, int wordLength, int numGuesses) {
         mySecretWord = getSecretWord(dictionary, wordLength);
         myNumGuessesLeft = numGuesses;
         myLettersLeftToGuess = new StringBuilder(ALPHABET);
         myDisplayWord = new DisplayWord(mySecretWord);
+        myGuesser = guesser;
     }
 
     /**
@@ -43,7 +44,7 @@ public class HangmanGameInteractiveGuesser {
         while (!gameOver) {
             printStatus();
 
-            String guess = ConsoleReader.promptString("Make a guess: ");
+            String guess = myGuesser.getGuess();
             if (guess.length() == 1 && Character.isAlphabetic(guess.charAt(0))) {
                 makeGuess(guess.toLowerCase().charAt(0));
                 if (isGameLost()) {
