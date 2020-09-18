@@ -9,27 +9,27 @@
 
  * What is the purpose of each interface implemented by LinkedList?
   LinkedList implement the interfaces below:
- * Serializable
- * Clonaeable
- * Iterable<E>
- * Collection<E>
- * Deque<E>
- * List<E>
- * Queue<E>
+   * Serializable
+   * Clonaeable
+   * Iterable<E>
+   * Collection<E>
+   * Deque<E>
+   * List<E>
+   * Queue<E>
 
  * What is the purpose of each superclass of HashMap?
 
  * How many different implementations are there for a Set?
 
  * What methods are common to all collections?
- - equals()
- - hashCode()
- - toString()
+   - equals()
+   - hashCode()
+   - toString()
 
  * What methods are common to all Queues?
- - add()
- - remove()
- - element()
+   - add()
+   - remove()
+   - element()
 
  * What is the purpose of the collection utility classes?
 The collection utility classes provide static methods to be called on objects implementing the collection framework. 
