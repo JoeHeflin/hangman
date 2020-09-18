@@ -41,9 +41,9 @@ The collection utility classes provide static methods to be called on objects im
  * What additional methods might be helpful to make the code more readable or usable?
 
  * Who should be responsible for each of these instance variables:
-   * ```mySecretWord```
-   * ```myNumGuessesLeft```
-   * ```myDisplayWord```
+   * ```mySecretWord``` - Executioner
+   * ```myNumGuessesLeft``` - Guesser
+   * ```myDisplayWord``` - Executioner
 
  * What strategies help you identify which parts of the code are related to the different kinds of executioners?
 
