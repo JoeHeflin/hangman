@@ -8,6 +8,14 @@
 ### Collections Discussion
 
  * What is the purpose of each interface implemented by LinkedList?
+  LinkedList implement the interfaces below:
+ * Serializable
+ * Clonaeable
+ * Iterable<E>
+ * Collection<E>
+ * Deque<E>
+ * List<E>
+ * Queue<E>
 
  * What is the purpose of each superclass of HashMap?
 
