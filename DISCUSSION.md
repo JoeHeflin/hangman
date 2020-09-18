@@ -11,11 +11,17 @@
  * How many different implementations are there for a Set?
 
  * What methods are common to all collections?
+ - equals()
+ - hashCode()
+ - toString()
 
  * What methods are common to all Queues?
+ - add()
+ - remove()
+ - element()
 
  * What is the purpose of the collection utility classes?
-
+The collection utility classes provide static methods to be called on objects implementing the collection framework. 
 
 ### Original Code
 

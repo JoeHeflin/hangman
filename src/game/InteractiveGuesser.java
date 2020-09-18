@@ -1,7 +1,5 @@
 package game;
 
-import util.ConsoleReader;
-
 
 /**
  * This class represents a player that allows the user to guess letters interactively.

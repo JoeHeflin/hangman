@@ -1,4 +1,3 @@
-import game.AutoGuesser;
 import game.InteractiveGuesser;
 import game.HangmanGame;
 import util.HangmanDictionary;
@@ -22,7 +21,7 @@ public class Main {
             new InteractiveGuesser(),
             new HangmanDictionary(DICTIONARY), NUM_LETTERS, NUM_MISSES).play();
 //        new HangmanGame(
-//            new AutoGuesser(),
+//            new game.AutoGuesser(),
 //            new HangmanDictionary(DICTIONARY), NUM_LETTERS, NUM_MISSES).play();
     }
 }
