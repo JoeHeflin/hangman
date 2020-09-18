@@ -6,7 +6,7 @@ import util.HangmanDictionary;
 
 /**
  * This class represents the traditional word-guessing game Hangman
- * that plays interactively with the user.
+ * played between two different kinds of players.
  *
  * @author Robert C. Duvall
  */
