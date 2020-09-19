@@ -1,8 +1,8 @@
 package game;
 
+
 import util.DisplayWord;
 import util.HangmanDictionary;
-
 
 /**
  * This class represents the traditional word-guessing game Hangman
@@ -12,6 +12,7 @@ import util.HangmanDictionary;
  */
 public class HangmanGame {
     private static final String ALPHABET = "abcdefghijklmnopqrstuvwxyz";
+    private static final String WORDS_FILE = "lowerwords.txt";
 
     // word that is being guessed
     private String mySecretWord;
@@ -22,6 +23,8 @@ public class HangmanGame {
     // tracks letters guessed
     private StringBuilder myLettersLeftToGuess;
     private Guesser myGuesser;
+    private RandomExecutioner myRandomExecutioner;
+    private InteractiveExecutioner myInteractiveExecutioner;
 
 
     /**
@@ -29,7 +32,9 @@ public class HangmanGame {
      * of the given length and giving the user the given number of chances.
      */
     public HangmanGame (Guesser guesser, HangmanDictionary dictionary, int wordLength, int numGuesses) {
-        mySecretWord = getSecretWord(dictionary, wordLength);
+//        myRandomExecutioner = new RandomExecutioner(WORDS_FILE);
+        myInteractiveExecutioner = new InteractiveExecutioner();
+        mySecretWord = myRandomExecutioner.getSecretWord();
         myNumGuessesLeft = numGuesses;
         myLettersLeftToGuess = new StringBuilder(ALPHABET);
         myDisplayWord = new DisplayWord(mySecretWord);

@@ -1,9 +1,10 @@
 package game;
 
+
+import game.AutoGuesser;
 import util.ConsoleReader;
 import util.DisplayWord;
 import util.HangmanDictionary;
-
 
 /**
  * This class represents the traditional word-guessing game Hangman

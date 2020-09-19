@@ -1,6 +1,7 @@
-import game.InteractiveGuesser;
+package util;
+
 import game.HangmanGame;
-import util.HangmanDictionary;
+import game.InteractiveGuesser;
 
 
 /**

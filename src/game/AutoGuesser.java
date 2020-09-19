@@ -1,6 +1,5 @@
 package game;
 
-
 /**
  * This class represents a player that guesses letters automatically based on how common they are in English words.
  *
@@ -13,7 +12,7 @@ public class AutoGuesser extends Guesser {
 
 
     /**
-     * @see Guesser#getGuess()
+     * @see //Guesser#getGuess()
      */
     public String getGuess () {
         return "" + LETTERS_ORDERED_BY_FREQUENCY.charAt(myIndex++);
