@@ -23,8 +23,8 @@ public class HangmanGame {
     // tracks letters guessed
     private StringBuilder myLettersLeftToGuess;
     private Guesser myGuesser;
-    private RandomExecutioner myRandomExecutioner;
-    private InteractiveExecutioner myInteractiveExecutioner;
+    private Executioner myRandomExecutioner;
+    private Executioner myInteractiveExecutioner;
 
 
     /**
